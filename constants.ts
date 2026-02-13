@@ -1,0 +1,133 @@
+
+import { UserRole, JobType, Language } from './types';
+
+export const WILAYAS = [
+  "1-Adrar", "2-Chlef", "3-Laghouat", "4-Oum El Bouaghi", "5-Batna", "6-Béjaïa", "7-Biskra", "8-Béchar", "9-Blida", "10-Bouira",
+  "11-Tamanrasset", "12-Tébessa", "13-Tlemcen", "14-Tiaret", "15-Tizi Ouzou", "16-Alger", "17-Djelfa", "18-Jijel", "19-Sétif", "20-Saïda",
+  "21-Skikda", "22-Sidi Bel Abbès", "23-Annaba", "24-Guelma", "25-Constantine", "26-Médéa", "27-Mostaganem", "28-M'Sila", "29-Mascara", "30-Ouargla",
+  "31-Oran", "32-El Bayadh", "33-Illizi", "34-Bordj Bou Arreridj", "35-Boumerdès", "36-El Tarf", "37-Tindouf", "38-Tissemsilt", "39-El Oued", "40-Khenchela",
+  "41-Souk Ahras", "42-Tipaza", "43-Mila", "44-Aïn Defla", "45-Naâma", "46-Aïn Témouchent", "47-Ghardaïa", "48-Relizane", "49-El M'Ghair", "50-El Meniaa",
+  "51-Ouled Djellal", "52-Bordj Baji Mokhtar", "53-Béni Abbès", "54-Timimoun", "55-Touggourt", "56-Djanet", "57-In Salah", "58-In Guezzam"
+];
+
+export const JOB_CATEGORIES = [
+  { id: 'tech', label: { ar: 'تكنولوجيا', fr: 'Technologie' }, icon: '💻' },
+  { id: 'construction', label: { ar: 'بناء وأشغال', fr: 'Construction' }, icon: '🏗️' },
+  { id: 'services', label: { ar: 'خدمات منزلية', fr: 'Services' }, icon: '🛠️' },
+  { id: 'delivery', label: { ar: 'توصيل', fr: 'Livraison' }, icon: '🛵' },
+  { id: 'health', label: { ar: 'صحة', fr: 'Santé' }, icon: '🏥' },
+  { id: 'edu', label: { ar: 'تعليم', fr: 'Education' }, icon: '📚' },
+  { id: 'admin', label: { ar: 'إدارة', fr: 'Administration' }, icon: '📁' },
+  { id: 'sales', label: { ar: 'تجارة ومبيعات', fr: 'Ventes' }, icon: '🛒' },
+];
+
+export const MOCK_JOBS = [
+  {
+    id: '1',
+    title: 'مطور واجهات أمامية React',
+    employerId: 'e1',
+    employerName: 'شركة ديزاد تك',
+    employerAvatar: 'https://picsum.photos/seed/tech/100/100',
+    wilaya: '16-Alger',
+    salary: '80,000 - 120,000 DZD',
+    type: 'Full-time' as JobType,
+    description: 'نبحث عن مطور ذو خبرة في React و Tailwind CSS للعمل على مشاريع مبتكرة.',
+    category: 'tech',
+    postedAt: '2023-10-25',
+    requiresExperience: true,
+    isFeatured: true
+  },
+  {
+    id: '2',
+    title: 'عامل بناء يومي',
+    employerId: 'e2',
+    employerName: 'مقاولات علي',
+    employerAvatar: 'https://picsum.photos/seed/build/100/100',
+    wilaya: '19-Sétif',
+    salary: '2,500 DZD / يوم',
+    type: 'Daily' as JobType,
+    description: 'مطلوب عامل بناء للمساعدة في مشروع سكني بوسط المدينة.',
+    category: 'construction',
+    postedAt: '2023-10-26',
+    requiresExperience: false
+  },
+  {
+    id: '3',
+    title: 'ميكانيكي سيارات محترف',
+    employerId: 'e3',
+    employerName: 'مرآب السرعة',
+    employerAvatar: 'https://picsum.photos/seed/car/100/100',
+    wilaya: '31-Oran',
+    salary: '60,000 DZD',
+    type: 'Full-time' as JobType,
+    description: 'نبحث عن ميكانيكي ماهر في تشخيص أعطال المحركات الحديثة.',
+    category: 'services',
+    postedAt: '2023-10-27',
+    requiresExperience: true
+  }
+];
+
+export const TRANSLATIONS = {
+  ar: {
+    home: "الرئيسية",
+    search: "بحث",
+    post: "نشر",
+    messages: "رسائل",
+    groups: "مجموعات",
+    profile: "حسابي",
+    latestJobs: "أحدث الوظائف",
+    featured: "وظائف مميزة",
+    nearby: "وظائف قريبة منك",
+    noExperience: "بدون خبرة",
+    popular: "الأكثر طلباً",
+    searchPlaceholder: "ابحث عن مهنة أو ولاية...",
+    wilaya: "الولاية",
+    profession: "المهنة",
+    role_daily_worker: "عامل يومي",
+    role_regular: "موظف",
+    role_freelancer: "عمل حر",
+    role_student: "طالب",
+    role_employer: "صاحب عمل",
+    role_service_provider: "مقدم خدمات",
+    login: "تسجيل الدخول",
+    register: "إنشاء حساب",
+    apply: "تقديم الآن",
+    postJob: "انشر عرض عمل",
+    save: "حفظ",
+    salary: "الراتب",
+    jobType: "نوع العمل",
+    description: "الوصف",
+    contact: "تواصل",
+  },
+  fr: {
+    home: "Accueil",
+    search: "Recherche",
+    post: "Publier",
+    messages: "Messages",
+    groups: "Groupes",
+    profile: "Profil",
+    latestJobs: "Derniers emplois",
+    featured: "Offres en vedette",
+    nearby: "Emplois à proximité",
+    noExperience: "Sans expérience",
+    popular: "Les plus demandés",
+    searchPlaceholder: "Chercher un métier ou wilaya...",
+    wilaya: "Wilaya",
+    profession: "Métier",
+    role_daily_worker: "Journalier",
+    role_regular: "Employé",
+    role_freelancer: "Freelance",
+    role_student: "Étudiant",
+    role_employer: "Employeur",
+    role_service_provider: "Prestataire",
+    login: "Connexion",
+    register: "S'inscrire",
+    apply: "Postuler",
+    postJob: "Publier une offre",
+    save: "Enregistrer",
+    salary: "Salaire",
+    jobType: "Type de contrat",
+    description: "Description",
+    contact: "Contact",
+  }
+};
